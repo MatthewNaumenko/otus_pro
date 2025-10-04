@@ -24,7 +24,7 @@ jobs:
           sudo apt-get install -y cmake build-essential
 
       - name: Configure (CMake)
-        run: cmake -S . -B build -D BUILD_NUMBER=${BUILD_NUMBER} -DCMAKE_BUILD_TYPE=Release
+        run: cmake -S homework_1 -B build -D BUILD_NUMBER=${BUILD_NUMBER} -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
         run: cmake --build build --config Release -- -j2
