@@ -12,6 +12,7 @@ endif()
 add_executable(helloworld_cli src/main.cpp)
 target_compile_features(helloworld_cli PRIVATE cxx_std_17)
 target_compile_definitions(helloworld_cli PRIVATE BUILD_NUMBER=${BUILD_NUMBER})
+target_link_options(helloworld_cli PRIVATE -static-libstdc++ -static-libgcc)
 
 include(GNUInstallDirs)
 install(TARGETS helloworld_cli RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
