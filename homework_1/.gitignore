@@ -1,0 +1,16 @@
+build/
+CMakeFiles/
+CMakeCache.txt
+Testing/
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+_install/
+*.dir/
+
+*.sln
+*.vcxproj*
+*.user
+
+*.log
+*.deb
