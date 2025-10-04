@@ -34,7 +34,9 @@ jobs:
         run: cmake --build build --config Release -- -j2
 
       - name: Test (CTest)
-        run: ctest --test-dir build --output-on-failure
+        run: |
+          cd build
+          ctest --output-on-failure
 
       - name: Package (.deb via CPack)
         run: cpack --config build/CPackConfig.cmake

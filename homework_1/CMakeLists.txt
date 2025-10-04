@@ -21,7 +21,7 @@ install(TARGETS helloworld_cli RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 include(CTest)          
 if(BUILD_TESTING)
   enable_testing()       
-  add_test(NAME prints_version COMMAND $<TARGET_FILE:helloworld_cli>)
+  add_test(NAME prints_version COMMAND helloworld_cli)
   set_tests_properties(prints_version PROPERTIES
     PASS_REGULAR_EXPRESSION "Version: ${BUILD_NUMBER}.*Hello, World!")
 endif()
